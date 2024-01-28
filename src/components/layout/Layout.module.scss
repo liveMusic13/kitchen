@@ -1,0 +1,24 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+
+.wrapper_layout {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	& ::-webkit-scrollbar {
+		width: adapt(10px, 1920px);
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: $color_two;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $color_three;
+		border-radius: adapt(20px, 1920px);
+	}
+}

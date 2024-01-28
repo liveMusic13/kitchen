@@ -1,0 +1,72 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+@import '../../../assets/styles/animations';
+
+button {
+	font-size: 1em;
+}
+
+.button__auth {
+	background-color: transparent;
+	display: flex;
+	align-items: center;
+	color: $color_three;
+	border-radius: adapt(20px, 1920px);
+	padding: 0px adapt(15px, 1920px);
+
+	&:hover {
+		cursor: pointer;
+		animation: button_auth_hover 0.4s linear 1 forwards;
+	}
+
+	&:not(:hover) {
+		animation: button_auth_not-hover 0.4s linear 1;
+	}
+
+	> img {
+		width: adapt(48px, 1920px);
+	}
+}
+
+.button__auth_in_start_page {
+	width: adapt(250px, 1920px);
+	height: adapt(45px, 1920px);
+	background-color: transparent;
+	border: 1px solid $color_three;
+	border-radius: adapt(20px, 1920px);
+	align-self: center;
+
+	&:hover {
+		cursor: pointer;
+		animation: button-in-start-page-auth 0.4s linear 1 forwards;
+	}
+
+	&:not(:hover) {
+		animation: not_button-in-start-page-auth 0.4s linear 1 forwards;
+	}
+}
+
+.button__to_home {
+	background-color: transparent;
+	align-self: start;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: $color_three;
+	width: adapt(140px, 1920px);
+	font-size: 1.2rem;
+	font-style: italic;
+
+	&:hover {
+		cursor: pointer;
+
+		> img {
+			width: adapt(130px, 1920px);
+		}
+	}
+
+	> img {
+		width: adapt(120px, 1920px);
+	}
+}

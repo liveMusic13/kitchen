@@ -1,0 +1,53 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+@import '../../assets/styles/mixins';
+
+.block__menu {
+	display: flex;
+	gap: adapt(20px, 1920px);
+
+	> .menu__recipe {
+		@include menu;
+
+		&:hover {
+			cursor: pointer;
+
+			> .block__recipe {
+				@include menu__block(adapt(31px, 1920px), adapt(150px, 1920px));
+
+				> li {
+					@include li;
+				}
+			}
+		}
+
+		> .block__recipe {
+			display: none;
+		}
+	}
+
+	> .menu__kitchen {
+		@include menu;
+
+		&:hover {
+			cursor: pointer;
+
+			> .block__kitchen {
+				@include menu__block(adapt(31px, 1920px), adapt(270px, 1920px));
+
+				> li {
+					@include li;
+				}
+			}
+		}
+
+		> .block__kitchen {
+			display: none;
+		}
+	}
+
+	> li {
+		&:hover {
+		}
+	}
+}

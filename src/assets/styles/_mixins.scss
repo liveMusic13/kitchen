@@ -1,0 +1,115 @@
+@import './variables';
+@import './functions';
+@import './animations';
+
+@mixin menu() {
+	font-size: 1.2rem;
+	color: $color_three;
+	font-weight: 500;
+	position: relative;
+}
+
+@mixin menu__block($top, $width) {
+	display: block;
+	position: absolute;
+	top: $top;
+	left: 0;
+	z-index: 50;
+	width: $width;
+	background-color: $color_five;
+	border-radius: adapt(15px, 1920px);
+	animation: view_menu 0.5s linear 1;
+}
+
+@mixin li() {
+	padding: adapt(10px, 1920px) adapt(20px, 1920px);
+	border-bottom: 1px solid $color_three;
+	font-size: 0.9rem;
+	color: $color_three;
+
+	&:first-child {
+		&:hover {
+			border-top-left-radius: adapt(15px, 1920px);
+			border-top-right-radius: adapt(15px, 1920px);
+		}
+	}
+
+	&:last-child {
+		border-bottom: 0px;
+
+		&:hover {
+			border-bottom-left-radius: adapt(15px, 1920px);
+			border-bottom-right-radius: adapt(15px, 1920px);
+		}
+	}
+
+	&:hover {
+		font-size: 0.85rem;
+		color: $color_two;
+		background-color: $color_three;
+	}
+}
+
+@mixin wrapper_auth-and-register($width, $height) {
+	border: 1px solid $color_three;
+	border-radius: adapt(20px, 1920px);
+	width: $width;
+	height: $height;
+	padding: adapt(30px, 1920px) adapt(20px, 1920px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: adapt(50px, 1920px);
+	background-color: $color_two;
+
+	> .h2 {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	> .form {
+		display: flex;
+		flex-direction: column;
+		gap: adapt(30px, 1920px);
+		width: 100%;
+		font-size: 1rem;
+
+		> .block__input {
+			width: 100%;
+			position: relative;
+
+			> input {
+				width: 100%;
+				height: adapt(50px, 1920px);
+				border: 1px solid $color_three;
+				border-radius: adapt(20px, 1920px);
+				background-color: transparent;
+				padding: adapt(8px, 1920px) adapt(20px, 1920px);
+				outline: none;
+
+				&::placeholder {
+					color: $color_three;
+					opacity: 0.6;
+					font-size: 1rem;
+				}
+			}
+
+			> .errors {
+				font-size: 0.8rem;
+				color: rgb(182, 0, 0);
+				margin-top: adapt(-25px, 1920px);
+				margin-left: adapt(20px, 1920px);
+				position: absolute;
+				left: 0;
+				top: adapt(78px, 1920px);
+			}
+		}
+
+		> .block__buttons {
+			margin-top: adapt(30px, 1920px);
+			display: flex;
+			gap: adapt(10px, 1920px);
+			align-self: center;
+		}
+	}
+}

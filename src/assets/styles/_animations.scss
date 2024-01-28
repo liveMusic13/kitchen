@@ -1,0 +1,78 @@
+@import './variables';
+@import './functions';
+
+@keyframes button_auth_hover {
+	from {
+		border: 0px;
+	}
+	to {
+		border: 1px solid $color_four;
+		box-shadow: 0px 0px adapt(15px, 1920px) $color_three;
+	}
+}
+
+@keyframes button_auth_not-hover {
+	from {
+		border: 1px solid $color_four;
+		box-shadow: 0px 0px adapt(15px, 1920px) $color_three;
+	}
+	to {
+		border: 0px;
+	}
+}
+
+@keyframes button-in-start-page-auth {
+	from {
+		background-color: transparent;
+		border: 1px solid $color_three;
+		color: $color_three;
+	}
+	to {
+		background-color: $color_three;
+		border: 0px;
+		color: $color_two;
+	}
+}
+
+@keyframes not_button-in-start-page-auth {
+	from {
+		background-color: $color_three;
+		border: 0px;
+		color: $color_two;
+	}
+	to {
+		background-color: transparent;
+		border: 1px solid $color_three;
+		color: $color_three;
+	}
+}
+
+@keyframes button_recipe {
+	from {
+		background-color: $color_three;
+	}
+	to {
+		background-color: transparent;
+		box-shadow: 0px 0px adapt(20px, 1920px) $color_three;
+		color: $color_three;
+	}
+}
+
+@keyframes view_menu {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes target_recipe {
+	from {
+		box-shadow: none;
+	}
+	to {
+		box-shadow: adapt(10px, 1920px) adapt(10px, 1920px) adapt(20px, 1920px)
+			$color_five;
+	}
+}

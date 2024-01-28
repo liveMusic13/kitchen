@@ -1,0 +1,120 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+@import '../../assets/styles/animations';
+
+.wrapper_detailRecipe {
+	position: relative;
+	border: 1px solid $color_three;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: adapt(50px, 1920px);
+	background-color: $color_one;
+	padding: adapt(20px, 1920px) adapt(30px, 1920px);
+
+	> .button__exit {
+		position: absolute;
+		right: 5%;
+		background-color: transparent;
+		width: adapt(70px, 1920px);
+
+		&:hover {
+			cursor: pointer;
+
+			> img {
+				width: adapt(85px, 1920px);
+			}
+		}
+
+		> img {
+			width: adapt(70px, 1920px);
+		}
+	}
+
+	> .title {
+		font-size: 2rem;
+		font-weight: 700;
+	}
+
+	> .block__image {
+		display: flex;
+		gap: adapt(50px, 1920px);
+		width: 100%;
+		height: adapt(650px, 1920px);
+
+		> img {
+			flex: 1 1 60%;
+			border-radius: adapt(20px, 1920px);
+			border: adapt(5px, 1920px) solid $color_three;
+		}
+		> .block__ingredients {
+			flex: 1 1 40%;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			gap: adapt(15px, 1920px);
+
+			> p {
+				width: adapt(150px, 1920px);
+				height: adapt(50px, 1920px);
+				background-color: $color_three;
+				color: $color_one;
+				padding: adapt(5px, 1920px) adapt(10px, 1920px);
+				text-align: center;
+				border-radius: adapt(10px, 1920px);
+				font-size: 1.1rem;
+			}
+		}
+	}
+	> .description {
+		font-size: 1.3rem;
+		line-height: 1.3;
+		text-indent: 1.3rem;
+	}
+	> .block__buttons {
+		display: flex;
+		gap: adapt(50px, 1920px);
+
+		> .button__addFavorite {
+			background-color: $color_three;
+			display: flex;
+			align-items: center;
+			border-radius: adapt(20px, 1920px);
+			// width: adapt(90px, 1920px);
+			font-size: 1rem;
+			font-weight: 600;
+			color: $color_one;
+			padding: 0px adapt(20px, 1920px);
+
+			&:hover {
+				//TODO: СДЕЛАТЬ BACKGROUND КОГДА ЛАЙК ОТ ПРОСМАТРИВАЕМОГО ЮЗЕРА УЖЕ СТОИТ
+				cursor: pointer;
+				animation: button_recipe 0.3s linear 1 forwards;
+			}
+		}
+		> .button__like {
+			background-color: $color_three;
+			display: flex;
+			align-items: center;
+			gap: adapt(5px, 1920px);
+			border-radius: adapt(20px, 1920px);
+			width: adapt(90px, 1920px);
+			font-size: 1rem;
+			font-weight: 600;
+			color: $color_one;
+			padding: 0px adapt(10px, 1920px);
+
+			&:hover {
+				//TODO: СДЕЛАТЬ BACKGROUND КОГДА ЛАЙК ОТ ПРОСМАТРИВАЕМОГО ЮЗЕРА УЖЕ СТОИТ
+				cursor: pointer;
+				animation: button_recipe 0.3s linear 1 forwards;
+			}
+
+			> .like__image {
+				width: adapt(40px, 1920px);
+				margin-left: adapt(5px, 1920px);
+			}
+		}
+	}
+}

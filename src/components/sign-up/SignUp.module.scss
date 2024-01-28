@@ -1,0 +1,10 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+@import '../../assets/styles/mixins';
+
+.wrapper_register {
+	@include wrapper_auth-and-register(
+		adapt(650px, 1920px),
+		adapt(400px, 1920px)
+	);
+}

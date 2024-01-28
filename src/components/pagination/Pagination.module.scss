@@ -1,0 +1,23 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+
+nav {
+	display: flex;
+	justify-content: center;
+	margin-top: adapt(80px, 1920px);
+
+	> .pagination {
+		display: flex;
+		gap: adapt(20px, 1920px);
+
+		> .page-item {
+			color: $color_three;
+			font-style: italic;
+			font-size: 1.3rem;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}

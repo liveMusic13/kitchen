@@ -1,0 +1,90 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+@import '../../assets/styles/animations';
+
+.wrapper_recipe {
+	display: flex;
+	gap: adapt(20px, 1920px);
+	border: adapt(3px, 1920px) solid $color_three;
+	border-radius: adapt(20px, 1920px);
+	width: adapt(650px, 1920px);
+
+	&:hover {
+		cursor: pointer;
+		animation: target_recipe 0.3s linear 1 forwards;
+	}
+
+	.preview__image {
+		width: adapt(150px, 1920px);
+		border-bottom-left-radius: adapt(17px, 1920px);
+		border-top-left-radius: adapt(17px, 1920px);
+		border-right: adapt(3px, 1920px) solid $color_three;
+	}
+
+	.block__preview {
+		display: flex;
+		flex-direction: column;
+		gap: adapt(10px, 1920px);
+		width: 100%;
+		height: 93%;
+		padding-right: adapt(15px, 1920px);
+
+		> .title {
+			font-size: 1.2rem;
+			font-weight: 500;
+			width: 100%;
+			text-align: center;
+		}
+
+		> .description {
+			font-size: 0.9rem;
+			font-style: italic;
+			flex: 1 1 auto;
+		}
+
+		> .block__bottom {
+			align-self: end;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+
+			> .block__ingredients {
+				display: flex;
+				align-items: center;
+				gap: adapt(5px, 1920px);
+				padding-right: adapt(12px, 1920px);
+
+				> .ingredient {
+					background-color: $color_three;
+					color: $color_four;
+					font-size: 0.8rem;
+					height: adapt(23px, 1920px);
+					padding: 0px adapt(5px, 1920px);
+					border-radius: adapt(8px, 1920px);
+				}
+			}
+
+			> .like__preview {
+				background-color: transparent;
+				display: flex;
+				align-items: center;
+				gap: adapt(5px, 1920px);
+				border-radius: adapt(20px, 1920px);
+				width: adapt(80px, 1920px);
+				font-size: 1rem;
+				font-weight: 600;
+				padding: 0px adapt(7px, 1920px);
+				box-shadow: 0px 0px adapt(20px, 1920px) $color_five;
+
+				// &:hover { //TODO: СДЕЛАТЬ BACKGROUND КОГДА ЛАЙК ОТ ПРОСМАТРИВАЕМОГО ЮЗЕРА УЖЕ СТОИТ
+				// 	cursor: pointer;
+				// 	animation: button_recipe 0.3s linear 1 forwards;
+				// }
+
+				> .like__image {
+					width: adapt(40px, 1920px);
+				}
+			}
+		}
+	}
+}

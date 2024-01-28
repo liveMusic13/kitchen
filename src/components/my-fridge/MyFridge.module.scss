@@ -1,0 +1,31 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+
+.wrapper_fridge {
+	width: 20%;
+	background-color: $color_four;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	gap: adapt(40px, 1920px);
+
+	.h2 {
+		font-size: 1.5rem;
+		font-weight: 600;
+	}
+
+	> button {
+		background-color: transparent;
+		width: 100%;
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		> img {
+			width: 100%;
+		}
+	}
+}

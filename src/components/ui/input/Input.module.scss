@@ -1,0 +1,29 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/functions';
+
+.block__password {
+	display: flex;
+	gap: adapt(20px, 1920px);
+
+	> .view__password {
+		background-color: transparent;
+		font-size: 0.9rem;
+	}
+}
+
+.password {
+	outline: none;
+	width: adapt(290px, 1920px);
+	height: adapt(45px, 1920px);
+	border-radius: adapt(20px, 1920px);
+	border: adapt(2px, 1920px) solid $color_three;
+	background-color: transparent;
+	padding: adapt(8px, 1920px) adapt(15px, 1920px);
+	font-size: 0.9rem;
+	color: $color_three;
+
+	&::placeholder {
+		color: $color_three;
+		opacity: 0.7;
+	}
+}

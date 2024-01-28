@@ -1,0 +1,64 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/functions';
+@import '../../assets/styles/mixins';
+
+.wrapper_header {
+	background-color: $color_two;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: adapt(5px, 1920px) adapt(30px, 1920px);
+}
+
+.block__logo {
+	display: flex;
+	align-items: center;
+	gap: adapt(10px, 1920px);
+
+	> img {
+		width: adapt(80px, 1920px);
+		border-radius: 50%;
+	}
+
+	> .logo {
+		font-size: 1.8rem;
+		font-weight: 700;
+	}
+}
+
+.block__menu {
+	position: relative;
+
+	&:hover {
+		cursor: pointer;
+
+		> ul {
+			display: block;
+		}
+	}
+
+	> .title__menu {
+		font-size: 1.2rem;
+		font-weight: 500;
+	}
+
+	> ul {
+		@include menu__block(adapt(30px, 1920px), adapt(230px, 1920px));
+		display: none;
+
+		> .list__menu {
+			@include li;
+		}
+	}
+}
+
+.welcome__name {
+	font-size: 1.1rem;
+	font-weight: 500;
+
+	> span {
+		font-weight: 400;
+		font-style: italic;
+	}
+}
